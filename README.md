@@ -32,8 +32,8 @@ cliente.py
 
 ## Explicação de como funciona
 
-No arquivo servidor.py quando executado se criar um objeto do tipo socket e se inicia as conexões do lado servidor 
-e gerencia se ele aceita outras conexões ou não. Então no arquivo cliente.py quando executado solicita conexão como cliente com o lado servidor, apos aprovado ele gera e envia uma string de um inteiro aleatorio até 30 casas e envia ao lado servidor,o lado servidor então recebe e converte em inteiro,caso o inteiro seja menor que 10 o servidor retornará se ele é par ou impar, mas caso seja maior que 10 o lado do servidor gera uma string de mesmo tamanho e retorna ao lado cliente, que por usa vez independente do retorno do lado servidor imprime o retorno e apos imprime FIM. Apos um sleep de 10 segundos o lado cliente tentara se executar novamente para as mesmas funções. 
+No arquivo servidor.py, quando executado, cria-se um objeto do tipo socket e se inicia as conexões do lado servidor, 
+que gerencia se ele aceita outras conexões ou não. Então no arquivo cliente.py, quando executado, solicita conexão como cliente com o lado servidor, após aprovado ele gera e envia um inteiro aleatório de até 30 casas o mandando para o lado servidor, o servidor então recebe e verifica, caso o inteiro seja menor que 10 o servidor retornará se ele é par ou impar ao cliente, mas caso seja maior que 10 o lado do servidor gera uma string aleatória de mesmo tamanho e retorna ao lado cliente, que por sua vez, independente do retorno do lado servidor, imprime o retorno e FIM. Após um sleep de 10 segundos o lado cliente sera executado novamente.
 
 ## Tecnoplogias Utilizadas
 

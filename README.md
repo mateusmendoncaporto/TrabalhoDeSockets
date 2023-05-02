@@ -32,8 +32,19 @@ cliente.py
 
 ## Explicação de como funciona
 
-No arquivo servidor.py, quando executado, cria-se um objeto do tipo socket e se inicia as conexões do lado servidor, 
-que gerencia se ele aceita outras conexões ou não. Então no arquivo cliente.py, quando executado, solicita conexão como cliente com o lado servidor, após aprovado ele gera e envia um inteiro aleatório de até 30 casas o mandando para o lado servidor, o servidor então recebe e verifica, caso o inteiro seja menor que 10 o servidor retornará se ele é par ou impar ao cliente, mas caso seja maior que 10 o lado do servidor gera uma string aleatória de mesmo tamanho e retorna ao lado cliente, que por sua vez, independente do retorno do lado servidor, imprime o retorno e FIM. Após um sleep de 10 segundos o lado cliente sera executado novamente.
+No arquivo servidor.py, quando executado, cria-se um objeto do tipo socket e define suas propriedades, como o tipo da conexão (se é TCP ou UDP), iniciando em seguida as conexões do lado servidor, 
+que verifica se o cliente foi conectado.
+
+ Então no arquivo cliente.py, quando executado, solicita conexão como cliente com o lado servidor, após aprovado ele gera e envia um inteiro aleatório de até 30 casas, o servidor então recebe e verifica, caso o inteiro seja menor que 10 o servidor retornará se ele é par ou impar ao cliente, mas caso seja maior que 10 o lado do servidor gera uma string aleatória de mesmo tamanho e retorna ao lado cliente, que por sua vez, independente do retorno do lado servidor, imprime o retorno e a string "FIM".  Após 10 segundos toda a conexão via socket é repetida.
+
+Em síntese, o programa realiza os seguintes passos;
+1- Servidor se conecta ao Cliente
+2- Cliente envia um número inteiro aleatório de no máximo 30 casas
+3- Servidor verifica se esse número é menor que 10, se for, verifica se é ímpar ou par, se não, gera uma string aleatória de mesmo tamanho.
+4- Servidor retorna pro Cliente o resultado do passo número três. 
+5- o Cliente imprime na tela o que foi retornado mais a string "FIM". 
+
+Com o adendo de que, todas as trocas de informações são impressas ou do lado do cliente, ou do lado do servidor, de modo a deixar a troca de dados mais evidente.
 
 ## Tecnoplogias Utilizadas
 
